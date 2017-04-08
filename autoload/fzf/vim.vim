@@ -467,7 +467,6 @@ function! fzf#vim#gitfiles(args, ...)
   if a:args != '?'
     return s:fzf('gfiles', {
     \ 'source':  'git ls-files '.a:args,
-    \ 'dir':     root,
     \ 'options': '-m --prompt "GitFiles> "'
     \}, a:000)
   endif
@@ -1215,4 +1214,3 @@ endfunction
 " ------------------------------------------------------------------
 let &cpo = s:cpo_save
 unlet s:cpo_save
-
