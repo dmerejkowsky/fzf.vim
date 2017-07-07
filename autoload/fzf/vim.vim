@@ -438,8 +438,8 @@ endfunction
 
 function! fzf#vim#history(...)
   return s:fzf('history-files', {
-  \ 'source':  reverse(s:all_files()),
-  \ 'options': '-m --prompt "Hist> "'
+  \ 'source':  s:all_files(),
+  \ 'options': '--no-sort -m --prompt "Hist> "'
   \}, a:000)
 endfunction
 
